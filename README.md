@@ -1,2 +1,2 @@
 # chess-sight
-Automated chess tabulation
+Automated chess tabulation by Nathan De Graaf
