@@ -1,0 +1,3 @@
+/home/nathan/Desktop/575/Chess/CMakeFiles/edit_cache.dir
+/home/nathan/Desktop/575/Chess/CMakeFiles/rebuild_cache.dir
+/home/nathan/Desktop/575/Chess/CMakeFiles/screencap.dir

@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8)
+project( screencap )
+find_package( OpenCV REQUIRED )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+add_executable( screencap screencap.cpp )
+target_link_libraries( screencap ${OpenCV_LIBS} )
