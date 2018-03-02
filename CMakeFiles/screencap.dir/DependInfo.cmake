@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/nathan/Desktop/575/Chess/screencap.cpp" "/home/nathan/Desktop/575/Chess/CMakeFiles/screencap.dir/screencap.cpp.o"
+  "/home/nathan/Desktop/490h/chess-sight/screencap.cpp" "/home/nathan/Desktop/490h/chess-sight/CMakeFiles/screencap.dir/screencap.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

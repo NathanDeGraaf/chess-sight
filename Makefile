@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nathan/Desktop/575/Chess
+CMAKE_SOURCE_DIR = /home/nathan/Desktop/490h/chess-sight
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nathan/Desktop/575/Chess
+CMAKE_BINARY_DIR = /home/nathan/Desktop/490h/chess-sight
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nathan/Desktop/575/Chess/CMakeFiles /home/nathan/Desktop/575/Chess/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nathan/Desktop/490h/chess-sight/CMakeFiles /home/nathan/Desktop/490h/chess-sight/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nathan/Desktop/575/Chess/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nathan/Desktop/490h/chess-sight/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,44 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named screencap
+# Target rules for targets named compareHistograms
 
 # Build rule for target.
-screencap: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 screencap
-.PHONY : screencap
+compareHistograms: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 compareHistograms
+.PHONY : compareHistograms
 
 # fast build rule for target.
-screencap/fast:
-	$(MAKE) -f CMakeFiles/screencap.dir/build.make CMakeFiles/screencap.dir/build
-.PHONY : screencap/fast
+compareHistograms/fast:
+	$(MAKE) -f CMakeFiles/compareHistograms.dir/build.make CMakeFiles/compareHistograms.dir/build
+.PHONY : compareHistograms/fast
 
-screencap.o: screencap.cpp.o
+compareHistograms.o: compareHistograms.cpp.o
 
-.PHONY : screencap.o
+.PHONY : compareHistograms.o
 
 # target to build an object file
-screencap.cpp.o:
-	$(MAKE) -f CMakeFiles/screencap.dir/build.make CMakeFiles/screencap.dir/screencap.cpp.o
-.PHONY : screencap.cpp.o
+compareHistograms.cpp.o:
+	$(MAKE) -f CMakeFiles/compareHistograms.dir/build.make CMakeFiles/compareHistograms.dir/compareHistograms.cpp.o
+.PHONY : compareHistograms.cpp.o
 
-screencap.i: screencap.cpp.i
+compareHistograms.i: compareHistograms.cpp.i
 
-.PHONY : screencap.i
+.PHONY : compareHistograms.i
 
 # target to preprocess a source file
-screencap.cpp.i:
-	$(MAKE) -f CMakeFiles/screencap.dir/build.make CMakeFiles/screencap.dir/screencap.cpp.i
-.PHONY : screencap.cpp.i
+compareHistograms.cpp.i:
+	$(MAKE) -f CMakeFiles/compareHistograms.dir/build.make CMakeFiles/compareHistograms.dir/compareHistograms.cpp.i
+.PHONY : compareHistograms.cpp.i
 
-screencap.s: screencap.cpp.s
+compareHistograms.s: compareHistograms.cpp.s
 
-.PHONY : screencap.s
+.PHONY : compareHistograms.s
 
 # target to generate assembly for a file
-screencap.cpp.s:
-	$(MAKE) -f CMakeFiles/screencap.dir/build.make CMakeFiles/screencap.dir/screencap.cpp.s
-.PHONY : screencap.cpp.s
+compareHistograms.cpp.s:
+	$(MAKE) -f CMakeFiles/compareHistograms.dir/build.make CMakeFiles/compareHistograms.dir/compareHistograms.cpp.s
+.PHONY : compareHistograms.cpp.s
 
 # Help Target
 help:
@@ -158,10 +158,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... screencap"
-	@echo "... screencap.o"
-	@echo "... screencap.i"
-	@echo "... screencap.s"
+	@echo "... compareHistograms"
+	@echo "... compareHistograms.o"
+	@echo "... compareHistograms.i"
+	@echo "... compareHistograms.s"
 .PHONY : help
 
 

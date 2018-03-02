@@ -48,5 +48,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/screencap.dir/DependInfo.cmake"
+  "CMakeFiles/compareHistograms.dir/DependInfo.cmake"
   )

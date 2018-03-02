@@ -54,45 +54,45 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nathan/Desktop/575/Chess
+CMAKE_SOURCE_DIR = /home/nathan/Desktop/490h/chess-sight
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nathan/Desktop/575/Chess
+CMAKE_BINARY_DIR = /home/nathan/Desktop/490h/chess-sight
 
 #=============================================================================
-# Target rules for target CMakeFiles/screencap.dir
+# Target rules for target CMakeFiles/compareHistograms.dir
 
 # All Build rule for target.
-CMakeFiles/screencap.dir/all:
-	$(MAKE) -f CMakeFiles/screencap.dir/build.make CMakeFiles/screencap.dir/depend
-	$(MAKE) -f CMakeFiles/screencap.dir/build.make CMakeFiles/screencap.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nathan/Desktop/575/Chess/CMakeFiles --progress-num=1,2 "Built target screencap"
-.PHONY : CMakeFiles/screencap.dir/all
+CMakeFiles/compareHistograms.dir/all:
+	$(MAKE) -f CMakeFiles/compareHistograms.dir/build.make CMakeFiles/compareHistograms.dir/depend
+	$(MAKE) -f CMakeFiles/compareHistograms.dir/build.make CMakeFiles/compareHistograms.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nathan/Desktop/490h/chess-sight/CMakeFiles --progress-num=1,2 "Built target compareHistograms"
+.PHONY : CMakeFiles/compareHistograms.dir/all
 
 # Include target in all.
-all: CMakeFiles/screencap.dir/all
+all: CMakeFiles/compareHistograms.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/screencap.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nathan/Desktop/575/Chess/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/screencap.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nathan/Desktop/575/Chess/CMakeFiles 0
-.PHONY : CMakeFiles/screencap.dir/rule
+CMakeFiles/compareHistograms.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nathan/Desktop/490h/chess-sight/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/compareHistograms.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nathan/Desktop/490h/chess-sight/CMakeFiles 0
+.PHONY : CMakeFiles/compareHistograms.dir/rule
 
 # Convenience name for target.
-screencap: CMakeFiles/screencap.dir/rule
+compareHistograms: CMakeFiles/compareHistograms.dir/rule
 
-.PHONY : screencap
-
-# clean rule for target.
-CMakeFiles/screencap.dir/clean:
-	$(MAKE) -f CMakeFiles/screencap.dir/build.make CMakeFiles/screencap.dir/clean
-.PHONY : CMakeFiles/screencap.dir/clean
+.PHONY : compareHistograms
 
 # clean rule for target.
-clean: CMakeFiles/screencap.dir/clean
+CMakeFiles/compareHistograms.dir/clean:
+	$(MAKE) -f CMakeFiles/compareHistograms.dir/build.make CMakeFiles/compareHistograms.dir/clean
+.PHONY : CMakeFiles/compareHistograms.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/compareHistograms.dir/clean
 
 .PHONY : clean
 

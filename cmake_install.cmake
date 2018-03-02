@@ -1,4 +1,4 @@
-# Install script for directory: /home/nathan/Desktop/575/Chess
+# Install script for directory: /home/nathan/Desktop/490h/chess-sight
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/nathan/Desktop/575/Chess/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/nathan/Desktop/490h/chess-sight/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
