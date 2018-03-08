@@ -93,7 +93,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELEASE:STRING=
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=compareHistograms
+CMAKE_PROJECT_NAME:STATIC=compareHistogramsPieces
 
 //Flags used by the linker during the creation of dll's.
 CMAKE_SHARED_LINKER_FLAGS:STRING=
@@ -142,6 +142,18 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 OpenCV_DIR:PATH=/usr/local/share/OpenCV
 
 //Value Computed by CMake
+compareHistogramPieces_BINARY_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
+
+//Value Computed by CMake
+compareHistogramPieces_SOURCE_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
+
+//Value Computed by CMake
+compareHistogramsPieces_BINARY_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
+
+//Value Computed by CMake
+compareHistogramsPieces_SOURCE_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
+
+//Value Computed by CMake
 compareHistograms_BINARY_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
 
 //Value Computed by CMake
@@ -154,10 +166,34 @@ filterAnImage_BINARY_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
 filterAnImage_SOURCE_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
 
 //Value Computed by CMake
+filterImages_BINARY_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
+
+//Value Computed by CMake
+filterImages_SOURCE_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
+
+//Value Computed by CMake
 filterLayers_BINARY_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
 
 //Value Computed by CMake
 filterLayers_SOURCE_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
+
+//Value Computed by CMake
+filterPiece_BINARY_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
+
+//Value Computed by CMake
+filterPiece_SOURCE_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
+
+//Value Computed by CMake
+filterPieces_BINARY_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
+
+//Value Computed by CMake
+filterPieces_SOURCE_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
+
+//Value Computed by CMake
+filterTestPieces_BINARY_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
+
+//Value Computed by CMake
+filterTestPieces_SOURCE_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
 
 //Value Computed by CMake
 histogram2_BINARY_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
@@ -166,10 +202,22 @@ histogram2_BINARY_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
 histogram2_SOURCE_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
 
 //Value Computed by CMake
+histogramPieces_BINARY_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
+
+//Value Computed by CMake
+histogramPieces_SOURCE_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
+
+//Value Computed by CMake
 histogram_BINARY_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
 
 //Value Computed by CMake
 histogram_SOURCE_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
+
+//Value Computed by CMake
+maskPieces_BINARY_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
+
+//Value Computed by CMake
+maskPieces_SOURCE_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
 
 //Value Computed by CMake
 screencap_BINARY_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight

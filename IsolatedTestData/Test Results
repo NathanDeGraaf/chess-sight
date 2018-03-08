@@ -1,0 +1,334 @@
+1
+  E4	CORRECT
+  F6	WRONG
+  G2	WRONG
+  H8	CORRECT
+
+2
+  E4	CORRECT
+  F6	WRONG
+  G2	WRONG
+  H8	CORRECT (low confidence)
+
+3
+  E4	WRONG
+  F6	WRONG
+  G2	WRONG
+  H8	CORRECT (low confidence)
+
+4
+  E4	WRONG
+  F6	CORRECT
+  G2	CORRECT
+  H8	CORRECT
+
+5
+  E4	WRONG
+  F6	CORRECT
+  G2	CORRECT (low confidence)
+  H8	WRONG
+
+50% accuracy using only color distribution.
+
+
+The full data:
+assuming color is: b
+pawn dif: 17722.379748
+bish dif: 19846.474622
+king dif: 11579.405493
+quee dif: 15851.797292
+knig dif: 19541.338721
+rook dif: 13729.719691
+assuming color is: w
+pawn dif: 6871.679117
+bish dif: 6308.270289
+king dif: 10185.315163
+quee dif: 8550.961199
+knig dif: 3680.814284
+rook dif: 8982.764297
+IsolatedTestData/i_1_F6.jpg
+assuming color is: b
+pawn dif: 6934.248395
+bish dif: 6020.629249
+king dif: 9639.620045
+quee dif: 7700.775897
+knig dif: 7567.959371
+rook dif: 10057.019896
+assuming color is: w
+pawn dif: 12168.035561
+bish dif: 14154.989254
+king dif: 17714.997556
+quee dif: 17572.694221
+knig dif: 17148.030041
+rook dif: 15381.469660
+IsolatedTestData/i_1_G2.jpg
+assuming color is: b
+pawn dif: 21644.529062
+bish dif: 21965.647546
+king dif: 21059.701785
+quee dif: 22975.439605
+knig dif: 23746.132824
+rook dif: 24564.063120
+assuming color is: w
+pawn dif: 11024.173917
+bish dif: 10494.526328
+king dif: 7815.411287
+quee dif: 7256.244522
+knig dif: 8038.639919
+rook dif: 7572.480998
+IsolatedTestData/i_1_H8.jpg
+assuming color is: b
+pawn dif: 27262.674104
+bish dif: 25798.731593
+king dif: 34410.143981
+quee dif: 30373.517359
+knig dif: 27632.099023
+rook dif: 27627.598520
+assuming color is: w
+pawn dif: 8764.881208
+bish dif: 13073.454919
+king dif: 20436.162564
+quee dif: 19894.893863
+knig dif: 14035.775920
+rook dif: 12745.269667
+IsolatedTestData/i_2_E4.jpg
+assuming color is: b
+pawn dif: 18018.308598
+bish dif: 20432.796894
+king dif: 13685.732157
+quee dif: 16406.441773
+knig dif: 19914.018786
+rook dif: 15039.608925
+assuming color is: w
+pawn dif: 9391.960317
+bish dif: 11162.744089
+king dif: 6891.900391
+quee dif: 3985.691957
+knig dif: 8705.104078
+rook dif: 7548.327912
+IsolatedTestData/i_2_F6.jpg
+assuming color is: b
+pawn dif: 7316.334535
+bish dif: 5929.007619
+king dif: 4773.639901
+quee dif: 5025.511616
+knig dif: 5341.736460
+rook dif: 5297.248170
+assuming color is: w
+pawn dif: 16914.483955
+bish dif: 17385.292265
+king dif: 20003.290703
+quee dif: 20154.474593
+knig dif: 20136.015848
+rook dif: 19462.596170
+IsolatedTestData/i_2_G2.jpg
+assuming color is: b
+pawn dif: 21179.593052
+bish dif: 21496.642699
+king dif: 20909.022111
+quee dif: 22334.305694
+knig dif: 23413.709907
+rook dif: 24954.554564
+assuming color is: w
+pawn dif: 12390.468082
+bish dif: 11927.644325
+king dif: 8656.784692
+quee dif: 8176.122878
+knig dif: 10445.884180
+rook dif: 12075.429187
+IsolatedTestData/i_2_H8.jpg
+assuming color is: b
+pawn dif: 7746.877334
+bish dif: 7771.274079
+king dif: 14267.581895
+quee dif: 11030.178792
+knig dif: 8264.541975
+rook dif: 9684.492062
+assuming color is: w
+pawn dif: 26117.359227
+bish dif: 31499.642098
+king dif: 34451.656701
+quee dif: 37187.511217
+knig dif: 31078.110987
+rook dif: 32403.017143
+IsolatedTestData/i_3_E4.jpg
+assuming color is: b
+pawn dif: 5220.930835
+bish dif: 2316.839454
+king dif: 9549.155987
+quee dif: 6561.345403
+knig dif: 3583.305468
+rook dif: 6256.836370
+assuming color is: w
+pawn dif: 17329.322598
+bish dif: 19075.577641
+king dif: 19930.926249
+quee dif: 19253.998832
+knig dif: 20787.653091
+rook dif: 17715.961000
+IsolatedTestData/i_3_F6.jpg
+assuming color is: b
+pawn dif: 8959.987294
+bish dif: 3330.776924
+king dif: 9236.209548
+quee dif: 8452.894507
+knig dif: 5425.114437
+rook dif: 9509.397721
+assuming color is: w
+pawn dif: 15343.404476
+bish dif: 16527.466700
+king dif: 19853.137750
+quee dif: 19750.711609
+knig dif: 19377.294335
+rook dif: 18385.524338
+IsolatedTestData/i_3_G2.jpg
+assuming color is: b
+pawn dif: 6842.149526
+bish dif: 4239.490613
+king dif: 5982.642124
+quee dif: 5902.694628
+knig dif: 3738.836613
+rook dif: 6884.340205
+assuming color is: w
+pawn dif: 20421.670683
+bish dif: 20590.378916
+king dif: 24350.572268
+quee dif: 21875.176576
+knig dif: 22012.705128
+rook dif: 23686.787169
+IsolatedTestData/i_3_H8.jpg
+assuming color is: b
+pawn dif: 6517.281573
+bish dif: 6601.320861
+king dif: 16034.007461
+quee dif: 11534.364246
+knig dif: 8478.853464
+rook dif: 9183.675003
+assuming color is: w
+pawn dif: 23806.045057
+bish dif: 29259.273467
+king dif: 32178.429881
+quee dif: 35087.217977
+knig dif: 28894.225088
+rook dif: 30275.643946
+IsolatedTestData/i_4_E4.jpg
+assuming color is: b
+pawn dif: 15160.218862
+bish dif: 16987.309735
+king dif: 10635.483018
+quee dif: 14265.018572
+knig dif: 16826.262855
+rook dif: 10957.466693
+assuming color is: w
+pawn dif: 6071.009776
+bish dif: 7974.500712
+king dif: 7633.094316
+quee dif: 6373.408255
+knig dif: 6623.000685
+rook dif: 5635.463476
+IsolatedTestData/i_4_F6.jpg
+assuming color is: b
+pawn dif: 18651.008932
+bish dif: 16747.059958
+king dif: 16298.783584
+quee dif: 15431.190997
+knig dif: 18565.486726
+rook dif: 19251.317102
+assuming color is: w
+pawn dif: 3479.155425
+bish dif: 5054.718448
+king dif: 10956.265016
+quee dif: 9321.570109
+knig dif: 6575.519592
+rook dif: 7653.244502
+IsolatedTestData/i_4_G2.jpg
+assuming color is: b
+pawn dif: 18847.114720
+bish dif: 19626.457985
+king dif: 19510.096676
+quee dif: 20605.947367
+knig dif: 21020.091929
+rook dif: 23087.114425
+assuming color is: w
+pawn dif: 11655.393582
+bish dif: 10868.998599
+king dif: 8342.453874
+quee dif: 7890.552377
+knig dif: 9673.438618
+rook dif: 6283.716428
+IsolatedTestData/i_4_H8.jpg
+assuming color is: b
+pawn dif: 27286.513806
+bish dif: 25826.307937
+king dif: 34938.028097
+quee dif: 30472.304376
+knig dif: 27806.895148
+rook dif: 27836.410594
+assuming color is: w
+pawn dif: 8811.858275
+bish dif: 5706.536364
+king dif: 14021.606060
+quee dif: 12188.588287
+knig dif: 6798.146640
+rook dif: 8342.431450
+IsolatedTestData/i_5_E4.jpg
+assuming color is: b
+pawn dif: 16192.928562
+bish dif: 17967.796673
+king dif: 11704.256929
+quee dif: 15630.073662
+knig dif: 17976.090512
+rook dif: 12257.658611
+assuming color is: w
+pawn dif: 5164.832065
+bish dif: 7694.548509
+king dif: 9410.717786
+quee dif: 7901.247824
+knig dif: 6236.334564
+rook dif: 6880.797795
+IsolatedTestData/i_5_F6.jpg
+assuming color is: b
+pawn dif: 17887.174554
+bish dif: 15985.258372
+king dif: 15800.916613
+quee dif: 14969.658505
+knig dif: 17940.790226
+rook dif: 18549.443872
+assuming color is: w
+pawn dif: 3024.898173
+bish dif: 4627.697964
+king dif: 12928.111863
+quee dif: 11221.193688
+knig dif: 6761.560910
+rook dif: 9256.840201
+IsolatedTestData/i_5_G2.jpg
+assuming color is: b
+pawn dif: 18437.782454
+bish dif: 18950.432201
+king dif: 18519.597857
+quee dif: 19911.010238
+knig dif: 20708.977965
+rook dif: 22391.084993
+assuming color is: w
+pawn dif: 10712.467085
+bish dif: 9758.884580
+king dif: 7522.844717
+quee dif: 6606.047813
+knig dif: 8753.708250
+rook dif: 6438.622241
+IsolatedTestData/i_5_H8.jpg
+assuming color is: b
+pawn dif: 24213.374950
+bish dif: 23200.212856
+king dif: 30129.499188
+quee dif: 26705.401428
+knig dif: 24703.462579
+rook dif: 25969.895945
+assuming color is: w
+pawn dif: 11738.990857
+bish dif: 14588.445691
+king dif: 21698.955247
+quee dif: 21244.530944
+knig dif: 15497.135104
+rook dif: 14520.179098
+

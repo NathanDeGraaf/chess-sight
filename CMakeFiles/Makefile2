@@ -60,39 +60,39 @@ CMAKE_SOURCE_DIR = /home/nathan/Desktop/490h/chess-sight
 CMAKE_BINARY_DIR = /home/nathan/Desktop/490h/chess-sight
 
 #=============================================================================
-# Target rules for target CMakeFiles/compareHistograms.dir
+# Target rules for target CMakeFiles/compareHistogramsPieces.dir
 
 # All Build rule for target.
-CMakeFiles/compareHistograms.dir/all:
-	$(MAKE) -f CMakeFiles/compareHistograms.dir/build.make CMakeFiles/compareHistograms.dir/depend
-	$(MAKE) -f CMakeFiles/compareHistograms.dir/build.make CMakeFiles/compareHistograms.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nathan/Desktop/490h/chess-sight/CMakeFiles --progress-num=1,2 "Built target compareHistograms"
-.PHONY : CMakeFiles/compareHistograms.dir/all
+CMakeFiles/compareHistogramsPieces.dir/all:
+	$(MAKE) -f CMakeFiles/compareHistogramsPieces.dir/build.make CMakeFiles/compareHistogramsPieces.dir/depend
+	$(MAKE) -f CMakeFiles/compareHistogramsPieces.dir/build.make CMakeFiles/compareHistogramsPieces.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nathan/Desktop/490h/chess-sight/CMakeFiles --progress-num=1,2 "Built target compareHistogramsPieces"
+.PHONY : CMakeFiles/compareHistogramsPieces.dir/all
 
 # Include target in all.
-all: CMakeFiles/compareHistograms.dir/all
+all: CMakeFiles/compareHistogramsPieces.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/compareHistograms.dir/rule: cmake_check_build_system
+CMakeFiles/compareHistogramsPieces.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nathan/Desktop/490h/chess-sight/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/compareHistograms.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/compareHistogramsPieces.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nathan/Desktop/490h/chess-sight/CMakeFiles 0
-.PHONY : CMakeFiles/compareHistograms.dir/rule
+.PHONY : CMakeFiles/compareHistogramsPieces.dir/rule
 
 # Convenience name for target.
-compareHistograms: CMakeFiles/compareHistograms.dir/rule
+compareHistogramsPieces: CMakeFiles/compareHistogramsPieces.dir/rule
 
-.PHONY : compareHistograms
-
-# clean rule for target.
-CMakeFiles/compareHistograms.dir/clean:
-	$(MAKE) -f CMakeFiles/compareHistograms.dir/build.make CMakeFiles/compareHistograms.dir/clean
-.PHONY : CMakeFiles/compareHistograms.dir/clean
+.PHONY : compareHistogramsPieces
 
 # clean rule for target.
-clean: CMakeFiles/compareHistograms.dir/clean
+CMakeFiles/compareHistogramsPieces.dir/clean:
+	$(MAKE) -f CMakeFiles/compareHistogramsPieces.dir/build.make CMakeFiles/compareHistogramsPieces.dir/clean
+.PHONY : CMakeFiles/compareHistogramsPieces.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/compareHistogramsPieces.dir/clean
 
 .PHONY : clean
 
