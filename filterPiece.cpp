@@ -34,6 +34,7 @@ Mat err(Mat input, int times);
 Mat dil(Mat input, int times);
 Mat removeColorRange(Mat , int *, Mat );
 Mat subtractAnImage(Mat , Mat );
+Mat removeTheMostlyRedAndGreenPixels(Mat );
 
 int main(int argc, char *argv[])
 {
@@ -44,6 +45,7 @@ int main(int argc, char *argv[])
     threshold(mask, mask, 100, 255, THRESH_BINARY);
     brd = imread("emptyBoard.jpg", CV_LOAD_IMAGE_COLOR);   // Read the file
 
+//    image = removeTheMostlyRedAndGreenPixels(image);
 
     Mat resMask = subtractAnImage(image,brd);
     Mat res,res2;
@@ -51,8 +53,10 @@ int main(int argc, char *argv[])
 
     res2.copyTo(res,mask);
 
-    namedWindow("iput", WINDOW_NORMAL);
-    imshow("iput",res);
+    res = removeTheMostlyRedAndGreenPixels(res);
+
+    namedWindow("output", WINDOW_NORMAL);
+    imshow("output",res);
 
 
 	imwrite(argv[2],res);
@@ -60,6 +64,48 @@ int main(int argc, char *argv[])
 
     waitKey(0);
     return 0;
+}
+
+Mat removeTheMostlyRedAndGreenPixels(Mat image) {
+    Mat res;
+    Mat mask;
+    image.copyTo(mask);
+    	for(int i = 0; i < mask.cols; i++){
+    	    for(int j = 0; j < mask.rows; j++){
+    	        Vec3b & color = mask.at<Vec3b>(Point(i,j));
+    	        float b = color[0];
+    	        float g = color[1];
+    	        float r = color[2];
+    	        float percentGreen = g / (r + g + b);
+    	        if(percentGreen > .4 && g > 20) {
+    	            color[0] = 0;
+    	            color[1] = 0;
+    	            color[2] = 0;
+    	        }
+    	        float percentRed = r / (r + g + b);
+    	        if(percentRed > .7 && r > 30) {
+    	            color[0] = 0;
+    	            color[1] = 0;
+    	            color[2] = 0;
+    	        }
+//    			printf("\t%d\t%d\t%d\n",image.at<Vec3b>(Point(i,j))[0],image.at<Vec3b>(Point(i,j))[1],image.at<Vec3b>(Point(i,j))[2]);
+    	    }
+    	}
+    cvtColor( mask, mask, CV_BGR2GRAY );
+    threshold(mask, mask, 1, 255, THRESH_BINARY);
+
+    namedWindow("a", WINDOW_NORMAL);
+    imshow("a",mask);
+    mask = dil(mask,1);
+    mask = err(mask,1);
+    mask = err(mask,2);
+    mask = dil(mask,2);
+    namedWindow("b", WINDOW_NORMAL);
+    imshow("b",mask);
+
+    image.copyTo(res,mask);
+
+    return res;
 }
 
 Mat subtractAnImage(Mat image1, Mat image2) {

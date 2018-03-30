@@ -93,7 +93,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELEASE:STRING=
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=compareHistogramsPieces
+CMAKE_PROJECT_NAME:STATIC=filterPieces
 
 //Flags used by the linker during the creation of dll's.
 CMAKE_SHARED_LINKER_FLAGS:STRING=
@@ -142,6 +142,12 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 OpenCV_DIR:PATH=/usr/local/share/OpenCV
 
 //Value Computed by CMake
+caffe_googlenet_BINARY_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
+
+//Value Computed by CMake
+caffe_googlenet_SOURCE_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
+
+//Value Computed by CMake
 compareHistogramPieces_BINARY_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
 
 //Value Computed by CMake
@@ -158,6 +164,18 @@ compareHistograms_BINARY_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
 
 //Value Computed by CMake
 compareHistograms_SOURCE_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
+
+//Value Computed by CMake
+dnntest_BINARY_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
+
+//Value Computed by CMake
+dnntest_SOURCE_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
+
+//Value Computed by CMake
+faster_rcnn_BINARY_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
+
+//Value Computed by CMake
+faster_rcnn_SOURCE_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
 
 //Value Computed by CMake
 filterAnImage_BINARY_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
@@ -224,6 +242,12 @@ screencap_BINARY_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
 
 //Value Computed by CMake
 screencap_SOURCE_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
+
+//Value Computed by CMake
+yolo_object_detection_BINARY_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
+
+//Value Computed by CMake
+yolo_object_detection_SOURCE_DIR:STATIC=/home/nathan/Desktop/490h/chess-sight
 
 
 ########################
@@ -334,5 +358,5 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding OpenCV
-FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/usr/local][v3.2.0()]
+FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/usr/local][v3.4.1()]
 

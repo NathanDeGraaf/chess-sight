@@ -34,27 +34,28 @@ Mat err(Mat input, int times);
 Mat dil(Mat input, int times);
 Mat removeColorRange(Mat , int *, Mat );
 Mat subtractAnImage(Mat , Mat );
+Mat removeTheMostlyRedAndGreenPixels(Mat );
 
 int main(int argc, char *argv[])
 {
 
-char squares[4][3] = {"E4","F6","G2","H8"};
-char colors[2][2] = {"b","w"};
+char squares[4][3] = {"E5"};
+char colors[2][2] = {"b"};
 char pieces[6][2] = {"B","K","N","P","Q","R"};
-int numbers[6] = {1,  1,  4,  1,  1,  1};
+int numbers[6] = {6,  4,  5,  4,  3,  5};
 
-for(int i = 0 ; i < 4 ; i ++) { // squares
-for(int j = 0 ; j < 2 ; j++) { // colors
+for(int i = 0 ; i < 1 ; i ++) { // squares
+for(int j = 0 ; j < 1 ; j++) { // colors
 for(int k = 0 ; k < 6; k ++) { // pieces
-for(int l = 0 ; l < numbers[k]; l ++) { // counts
+for(int l = 1 ; l <= numbers[k]; l ++) { // counts
 char* square = squares[i];
 char* color = colors[j];
 char* piece = pieces[k];
 
-char input[20];
-char output[20];
-sprintf(input, "Pieces/%s_%s_%s_%d.jpg",square,color,piece,l);
-sprintf(output, "IsolatedPieces/o_%s_%s_%s_%d.jpg",square,color,piece,l);
+char input[50];
+char output[50];
+sprintf(input, "TrainingData/Preprocessed/%s_%s_%s_%d.jpg",square,color,piece,l);
+sprintf(output, "TrainingData/Postprocessed/o_%s_%s_%s_%d.jpg",square,color,piece,l);
 printf("%s\n",input);
 
     Mat image, mask, brd;
@@ -67,14 +68,23 @@ printf("%s\n",input);
     Mat resMask = subtractAnImage(image,brd);
     Mat res,res2;
     image.copyTo(res2,resMask);
-
     res2.copyTo(res,mask);
 
+    res = removeTheMostlyRedAndGreenPixels(res);
+
     namedWindow(input, WINDOW_NORMAL);
+
+
+    Mat crop_img;
+    Rect myROI(875, 390, 150, 150);
+    crop_img = res(myROI);
+    imshow("cropped", crop_img);
+
+
     imshow(input,res);
 
 
-	imwrite(output,res);
+	imwrite(output,crop_img);
 
 }
 }
@@ -84,6 +94,48 @@ printf("%s\n",input);
 
     waitKey(0);
     return 0;
+}
+
+Mat removeTheMostlyRedAndGreenPixels(Mat image) {
+    Mat res;
+    Mat mask;
+    image.copyTo(mask);
+    	for(int i = 0; i < mask.cols; i++){
+    	    for(int j = 0; j < mask.rows; j++){
+    	        Vec3b & color = mask.at<Vec3b>(Point(i,j));
+    	        float b = color[0];
+    	        float g = color[1];
+    	        float r = color[2];
+    	        float percentGreen = g / (r + g + b);
+    	        if(percentGreen > .4 && g > 20) {
+    	            color[0] = 0;
+    	            color[1] = 0;
+    	            color[2] = 0;
+    	        }
+    	        float percentRed = r / (r + g + b);
+    	        if(percentRed > .7 && r > 30) {
+    	            color[0] = 0;
+    	            color[1] = 0;
+    	            color[2] = 0;
+    	        }
+//    			printf("\t%d\t%d\t%d\n",image.at<Vec3b>(Point(i,j))[0],image.at<Vec3b>(Point(i,j))[1],image.at<Vec3b>(Point(i,j))[2]);
+    	    }
+    	}
+    cvtColor( mask, mask, CV_BGR2GRAY );
+    threshold(mask, mask, 1, 255, THRESH_BINARY);
+
+    namedWindow("a", WINDOW_NORMAL);
+    imshow("a",mask);
+    mask = dil(mask,1);
+    mask = err(mask,1);
+    mask = err(mask,2);
+    mask = dil(mask,2);
+    namedWindow("b", WINDOW_NORMAL);
+    imshow("b",mask);
+
+    image.copyTo(res,mask);
+
+    return res;
 }
 
 Mat subtractAnImage(Mat image1, Mat image2) {

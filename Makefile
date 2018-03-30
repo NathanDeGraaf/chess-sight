@@ -111,44 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named compareHistogramsPieces
+# Target rules for targets named filterPieces
 
 # Build rule for target.
-compareHistogramsPieces: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 compareHistogramsPieces
-.PHONY : compareHistogramsPieces
+filterPieces: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 filterPieces
+.PHONY : filterPieces
 
 # fast build rule for target.
-compareHistogramsPieces/fast:
-	$(MAKE) -f CMakeFiles/compareHistogramsPieces.dir/build.make CMakeFiles/compareHistogramsPieces.dir/build
-.PHONY : compareHistogramsPieces/fast
+filterPieces/fast:
+	$(MAKE) -f CMakeFiles/filterPieces.dir/build.make CMakeFiles/filterPieces.dir/build
+.PHONY : filterPieces/fast
 
-compareHistogramsPieces.o: compareHistogramsPieces.cpp.o
+filterPieces.o: filterPieces.cpp.o
 
-.PHONY : compareHistogramsPieces.o
+.PHONY : filterPieces.o
 
 # target to build an object file
-compareHistogramsPieces.cpp.o:
-	$(MAKE) -f CMakeFiles/compareHistogramsPieces.dir/build.make CMakeFiles/compareHistogramsPieces.dir/compareHistogramsPieces.cpp.o
-.PHONY : compareHistogramsPieces.cpp.o
+filterPieces.cpp.o:
+	$(MAKE) -f CMakeFiles/filterPieces.dir/build.make CMakeFiles/filterPieces.dir/filterPieces.cpp.o
+.PHONY : filterPieces.cpp.o
 
-compareHistogramsPieces.i: compareHistogramsPieces.cpp.i
+filterPieces.i: filterPieces.cpp.i
 
-.PHONY : compareHistogramsPieces.i
+.PHONY : filterPieces.i
 
 # target to preprocess a source file
-compareHistogramsPieces.cpp.i:
-	$(MAKE) -f CMakeFiles/compareHistogramsPieces.dir/build.make CMakeFiles/compareHistogramsPieces.dir/compareHistogramsPieces.cpp.i
-.PHONY : compareHistogramsPieces.cpp.i
+filterPieces.cpp.i:
+	$(MAKE) -f CMakeFiles/filterPieces.dir/build.make CMakeFiles/filterPieces.dir/filterPieces.cpp.i
+.PHONY : filterPieces.cpp.i
 
-compareHistogramsPieces.s: compareHistogramsPieces.cpp.s
+filterPieces.s: filterPieces.cpp.s
 
-.PHONY : compareHistogramsPieces.s
+.PHONY : filterPieces.s
 
 # target to generate assembly for a file
-compareHistogramsPieces.cpp.s:
-	$(MAKE) -f CMakeFiles/compareHistogramsPieces.dir/build.make CMakeFiles/compareHistogramsPieces.dir/compareHistogramsPieces.cpp.s
-.PHONY : compareHistogramsPieces.cpp.s
+filterPieces.cpp.s:
+	$(MAKE) -f CMakeFiles/filterPieces.dir/build.make CMakeFiles/filterPieces.dir/filterPieces.cpp.s
+.PHONY : filterPieces.cpp.s
 
 # Help Target
 help:
@@ -158,10 +158,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... compareHistogramsPieces"
-	@echo "... compareHistogramsPieces.o"
-	@echo "... compareHistogramsPieces.i"
-	@echo "... compareHistogramsPieces.s"
+	@echo "... filterPieces"
+	@echo "... filterPieces.o"
+	@echo "... filterPieces.i"
+	@echo "... filterPieces.s"
 .PHONY : help
 
 
