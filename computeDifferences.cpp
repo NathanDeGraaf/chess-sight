@@ -35,65 +35,143 @@ Mat dil(Mat input, int times);
 Mat removeColorRange(Mat , int *, Mat );
 Mat subtractAnImage(Mat , Mat );
 Mat removeTheMostlyRedAndGreenPixels(Mat );
+Mat cropAroundCenter(Mat );
+int computeValue(Mat );
 
 int main(int argc, char *argv[])
 {
 
-char squares[4][3] = {"E5"};
-char colors[2][2] = {"b"};
-char pieces[6][2] = {"B","K","N","P","Q","R"};
-int numbers[6] = {5,  3,  4,  3,  2,  4};
 
-for(int i = 0 ; i < 1 ; i ++) { // squares
-for(int j = 0 ; j < 1 ; j++) { // colors
-for(int k = 0 ; k < 6; k ++) { // pieces
-for(int l = 1 ; l <= numbers[k]; l ++) { // counts
-char* square = squares[i];
-char* color = colors[j];
-char* piece = pieces[k];
+    char squares0[4][3] = {"E5"};
+    char colors0[2][2] = {"b"};
+    char pieces0[6][2] = {"B","K","N","P","Q","R"};
+    int numbers0[6] = {1,  1,  1,  1,  1,  1};
 
-char input[50];
-char output[50];
-sprintf(input, "TrainingData/TrainingPieces/%s_%s_%s_%d.jpg",square,color,piece,l);
-sprintf(output, "TrainingData/Postprocessed/o_%s_%s_%s_%d.jpg",square,color,piece,l);
-printf("%s\n",input);
+    for(int i0 = 0 ; i0 < 1 ; i0 ++) { // squares
+    for(int j0 = 0 ; j0 < 1 ; j0++) { // colors
+    for(int k0 = 0 ; k0 < 6; k0 ++) { // pieces
+    for(int l0 = 1 ; l0 <= numbers0[k0]; l0 ++) { // counts
+            char* square0 = squares0[i0];
+            char* color0 = colors0[j0];
+            char* piece0 = pieces0[k0];
 
-    Mat image, mask, brd;
-    image = imread(input, CV_LOAD_IMAGE_COLOR);   // Read the file
-    mask = imread("boardMask2.jpg", CV_LOAD_IMAGE_COLOR);   // Read the file
-    threshold(mask, mask, 100, 255, THRESH_BINARY);
-    brd = imread("emptyBoard.jpg", CV_LOAD_IMAGE_COLOR);   // Read the file
+        char input1[50];
+        sprintf(input1, "TrainingData/TestData/o_%s_%s_%s_%d.jpg",square0,color0,piece0,l0);
+        Mat myImage;
+        myImage = imread(input1, CV_LOAD_IMAGE_COLOR);   // Read the file
+
+        char min[50];
+        int minDist = -1;
 
 
-    Mat resMask = subtractAnImage(image,brd);
-    Mat res,res2;
-    image.copyTo(res2,resMask);
-    res2.copyTo(res,mask);
+        char squares[4][3] = {"E5"};
+        char colors[2][2] = {"b"};
+        char pieces[6][2] = {"B","K","N","P","Q","R"};
+        int numbers[6] = {5,  3,  4,  3,  2,  4};
 
-    res = removeTheMostlyRedAndGreenPixels(res);
-
-    namedWindow(input, WINDOW_NORMAL);
-
-
-    Mat crop_img;
-    Rect myROI(875, 390, 150, 150);
-    crop_img = res(myROI);
-    imshow("cropped", crop_img);
+        for(int i = 0 ; i < 1 ; i ++) { // squares
+        for(int j = 0 ; j < 1 ; j++) { // colors
+        for(int k = 0 ; k < 6; k ++) { // pieces
+        for(int l = 1 ; l <= numbers[k]; l ++) { // counts
+            char* square = squares[i];
+            char* color = colors[j];
+            char* piece = pieces[k];
 
 
-    imshow(input,res);
+            char input[50];
+            char output[50];
+            sprintf(input, "TrainingData/TrainingPieces/o_%s_%s_%s_%d.jpg",square,color,piece,l);
+            sprintf(output, "TrainingData/temp/o_%s_%s_%s_%d.jpg",square,color,piece,l);
+        //    printf("%s\n",input);
+
+            Mat image, mask, brd;
+            image = imread(input, CV_LOAD_IMAGE_COLOR);   // Read the file
+
+            Mat dif1 = image - myImage;
+            Mat dif2 = myImage - image;
+
+            Mat sum = dif1 + dif2;
+
+            imshow(input,sum);
+
+            imwrite(output,sum);
+            int dist = computeValue(sum);
+//            printf("%s: %d\n", input, dist);
+
+            if(minDist == -1 || dist < minDist) {
+                minDist = dist;
+                sprintf(min,"%s",input);
+            }
+
+        }
+        }
+        }
+        }
+
+        printf("%s\n",input1);
+        printf("Min: %s,%d\n\n",min,minDist);
 
 
-	imwrite(output,crop_img);
-
-}
-}
-}
-}
-
+    }
+    }
+    }
+    }
 
     waitKey(0);
     return 0;
+}
+
+int computeValue(Mat image) {
+    int count = 0;
+    Mat mask;
+
+    cvtColor( image, mask, CV_BGR2GRAY );
+
+
+    for(int i = 0; i < mask.rows; i++){
+        for(int j = 0; j < mask.cols; j++){
+        if(mask.at<bool>(i,j)>1){
+            count+= mask.at<bool>(i,j);
+        }
+        }
+    }
+
+    return count;
+}
+
+Mat cropAroundCenter(Mat image) {
+    int x = 0;
+    int y = 0;
+    int count = 0;
+    Mat mask;
+
+    cvtColor( image, mask, CV_BGR2GRAY );
+
+
+    for(int i = 0; i < mask.rows; i++){
+        for(int j = 0; j < mask.cols; j++){
+        if(mask.at<bool>(i,j)>1){
+            x+=j;
+            y+=i;
+            count++;
+        }
+        }
+    }
+
+    x = x / count;
+    y = y / count;
+
+    printf("%d,%d\n",x,y);
+
+    int width = 200;
+
+    Rect myROI(x - width/2, y - width/2, width, width);
+
+    Mat crop_img;
+    crop_img = image(myROI);
+
+    return crop_img;
+
 }
 
 Mat removeTheMostlyRedAndGreenPixels(Mat image) {
